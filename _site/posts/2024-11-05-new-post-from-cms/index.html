@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>new post from cms | My Blog</title>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/styles.css">  
 </head>
 <body>
@@ -69,18 +70,57 @@
 </header>
 
 <main class="main">
+    <p class="recent">Recent Posts</P>
     <article class="articles">
-        <h2>new post from cms}</h2>
-<h2>Tue Nov 05 2024 13:18:34 GMT+0300 (East Africa Time)}</h2>
-<img src="/images/uploads/blog-image-from-cms.jpeg" alt="new post from cms">
-<p>   <p><strong>In this post</strong>, I will continue the discussion from my first blog post. I will explore more about the themes and topics that are crucial to understanding my journey.</p>
- </p> 
+        
+        
+<div class="blog-post">
+    <h2 class="blog-post-title">new post from cms</h2>
+    <p class="blog-post-date">Tue Nov 05 2024 13:18:34 GMT+0300 (East Africa Time)</p>
+    <div class="blog-image-container"> 
+        <img src="/images/uploads/blog-image-from-cms.jpeg" alt="new post from cms" class="blog-post-image">
+        </div>
+   
+    <div class="blog-post-content"><p><strong>In this post</strong>, I will continue the discussion from my first blog post. I will explore more about the themes and topics that are crucial to understanding my journey.</p>
+</div>
+</div>
+ 
     </article>
 </main>
 
-<footer>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h3>About</h3>
+            <p>We share stories, insights, and resources to help you explore your interests and spark creativity. Join our journey!</p>
+        </div>
+
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul class="social-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section social">
+            <h3>Community</h3>
+              <div class="social-links">
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twiter</a>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i> FaceBook</a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i> Linked In</a>
+            </div>
+        </div>
+    </div>
     
+    <div class="footer-bottom">
+        &copy; 2024 My Blog | Designed with care
+    </div>
 </footer>
+
 
 <script>
     if (window.NetlifyIdentity) {

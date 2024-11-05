@@ -1,14 +1,19 @@
-<ul>
+<div class="posts">
+  <ul>
     {% for post in postslist %}
-        <li>
-            <strong>
-                <a href="{{ post.url | url }}">{{ post.data.title }}</a> 
-            </strong>
-           
-            -
-            <time dateTime="{{ post.date }}">{{ post.date }}</time> <!-- Optional: Display the post date -->
-            - 
-            <p>{{ post.description }}</p> 
-        </li>
+      <li class="post-card">
+        <!-- Display the post image -->
+        <img src="{{ post.data.image | url }}" alt="{{ post.data.title }} image" class="post-image">
+        
+        <!-- Display the post title, date, and description below the image -->
+        <div class="post-content">
+          <strong class="post-title">
+            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+          </strong>
+          <time class="post-date" dateTime="{{ post.date }}">{{ post.date | dayOnly }}</time>
+         <p class="post-description">{{ post.description }}</p>
+        </div>
+      </li>
     {% endfor %}
-</ul>
+  </ul>
+</div>
