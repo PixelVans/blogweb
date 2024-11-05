@@ -1,0 +1,14 @@
+<ul>
+    {% for post in postslist %}
+        <li>
+            <strong>
+                <a href="{{ post.url | url }}">{{ post.data.title }}</a> 
+            </strong>
+           
+            -
+            <time dateTime="{{ post.date }}">{{ post.date }}</time> <!-- Optional: Display the post date -->
+            - 
+            <p>{{ post.description }}</p> 
+        </li>
+    {% endfor %}
+</ul>
