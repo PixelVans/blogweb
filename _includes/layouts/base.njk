@@ -5,17 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if title %}{{ title }} | {% endif %}My Blog</title>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <link rel="stylesheet" href="/styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="/styles.css">  
 </head>
 <body>
 
 <header>
-    <h1>My Blog</h1>
+    <h1 class="logo">My Blog</h1>
+    <p class="slogan">Those who envision the beauty of tomorrow's dreams have already begun their journey to success.</p>
     <nav>
         <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/contact.html">Contact</a></li>
+            <li>
+                <a href="/about.html">Art</a>
+                <div class="dropdown">
+                    <a href="/art1.html">Art Piece 1</a>
+                    <a href="/art2.html">Art Piece 2</a>
+                </div>
+            </li>
+            <li>
+                <a href="/contact.html">Books</a>
+                <div class="dropdown">
+                    <a href="/book1.html">Book 1</a>
+                    <a href="/book2.html">Book 2</a>
+                </div>
+            </li>
+            <li>
+                <a href="/contact.html">Poetry</a>
+                <div class="dropdown">
+                    <a href="/poem1.html">Poem 1</a>
+                    <a href="/poem2.html">Poem 2</a>
+                </div>
+            </li>
+            <li>
+                <a href="/contact.html">Music</a>
+                <div class="dropdown">
+                    <a href="/music1.html">Song 1</a>
+                    <a href="/music2.html">Song 2</a>
+                </div>
+            </li>
+            <li>
+                <a href="/contact.html">Nature</a>
+                <div class="dropdown">
+                    <a href="/nature1.html">Nature Piece 1</a>
+                    <a href="/nature2.html">Nature Piece 2</a>
+                </div>
+            </li>
         </ul>
     </nav>
 </header>
@@ -31,15 +65,12 @@
 </footer>
 
 <script>
-    // Initialize Netlify Identity
     if (window.NetlifyIdentity) {
-        window.NetlifyIdentity.init(); // Initialize the identity widget
-
+        window.NetlifyIdentity.init();
         window.NetlifyIdentity.on('init', user => {
             if (!user) {
-                // If no user is logged in, set up login listener
                 window.NetlifyIdentity.on('login', () => {
-                    document.location.href = "/admin"; // Redirect to admin page after login
+                    document.location.href = "/admin"; 
                 });
             }
         });
