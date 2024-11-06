@@ -2,6 +2,7 @@
 layout: layouts/post.njk
 title: "My First Blog Post"
 date: "2024-11-05"
+category: "Music"
 image: "/images/uploads/image3.jpeg"
 description: "An introduction to my blog and what to expect in the upcoming posts."
 ---

@@ -5,9 +5,58 @@ layout: layouts/base.njk
 <div class="blog-post">
     <h2 class="blog-post-title">{{ title }}</h2>
     <p class="blog-post-date">{{ date }}</p>
-    <div class="blog-image-container"> 
+    <div class="blog-image-container">
         <img src="{{ image | url }}" alt="{{ title }}" class="blog-post-image">
-        </div>
-   
-    <div class="blog-post-content">{{ content | safe }}</div>
+    </div>
+
+    <div class="blog-post-content">
+        {{ content | safe }}
+    </div>
+     <div class="chapter-container">
+    {% if category == "Book" %}
+    <div class="chapters">
+        <ul>
+            {% for chapter in chapters %}
+                <li>
+                    <a href="#" class="chapter-link" data-chapter-id="chapter-{{ loop.index }}">{{ chapter.chapter_title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="chapter-content">
+        {% for chapter in chapters %}
+            <div id="chapter-{{ loop.index }}" class="chapter" style="display: none;">
+                <h3>{{ chapter.chapter_title }}</h3>
+                <p>{{ chapter.chapter_content | safe }}</p>
+            </div>
+        {% endfor %}
+    </div></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const chapterLinks = document.querySelectorAll('.chapter-link');
+            const allChapters = document.querySelectorAll('.chapter-content > .chapter');
+            
+            chapterLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const targetChapter = document.querySelector(`#${link.getAttribute('data-chapter-id')}`);
+                    
+                    allChapters.forEach(chapter => {
+                        chapter.style.display = 'none'; // Hide all chapters
+                    });
+                    
+                    targetChapter.style.display = 'block'; // Show clicked chapter
+                });
+            });
+
+            // Optional: Show the first chapter by default
+            if (allChapters.length > 0) {
+                allChapters[0].style.display = 'block';
+            }
+        });
+    </script>
+
+    {% endif %}
 </div>

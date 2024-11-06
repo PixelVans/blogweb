@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Blog Post | My Blog</title>
+    <title>The Great Adventure | My Blog</title>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/styles.css">  
@@ -75,24 +75,92 @@
         
         
 <div class="blog-post">
-    <h2 class="blog-post-title">My First Blog Post</h2>
-    <p class="blog-post-date">2024-11-05</p>
+    <h2 class="blog-post-title">The Great Adventure</h2>
+    <p class="blog-post-date">2024-11-06T00:00:00Z</p>
     <div class="blog-image-container">
-        <img src="/images/uploads/image1.jpg" alt="My First Blog Post" class="blog-post-image">
+        <img src="/images/uploads/post2.jpg" alt="The Great Adventure" class="blog-post-image">
     </div>
 
     <div class="blog-post-content">
-        <h2>Welcome to My Blog!</h2>
-<p>This is the content of my first blog post. Here, I will share my thoughts and insights on various topics. Stay tuned for more exciting posts!</p>
-<h3>What to Expect</h3>
-<ul>
-<li>Tutorials on web development</li>
-<li>Tips and tricks for coding</li>
-<li>Insights into industry trends</li>
-</ul>
-
+        
     </div>
      <div class="chapter-container">
+    
+    <div class="chapters">
+        <ul>
+            
+                <li>
+                    <a href="#" class="chapter-link" data-chapter-id="chapter-1">Chapter 1: The Beginning</a>
+                </li>
+            
+                <li>
+                    <a href="#" class="chapter-link" data-chapter-id="chapter-2">Chapter 2: The Encounter</a>
+                </li>
+            
+                <li>
+                    <a href="#" class="chapter-link" data-chapter-id="chapter-3">Chapter 3: The Climb</a>
+                </li>
+            
+                <li>
+                    <a href="#" class="chapter-link" data-chapter-id="chapter-4">Chapter 4: The Discovery</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="chapter-content">
+        
+            <div id="chapter-1" class="chapter" style="display: none;">
+                <h3>Chapter 1: The Beginning</h3>
+                <p>In the depths of the forest, the adventure began. The trees whispered secrets, and the wind carried messages from the ancient past. Our hero, brave and determined, took the first step on a journey that would change the world.
+</p>
+            </div>
+        
+            <div id="chapter-2" class="chapter" style="display: none;">
+                <h3>Chapter 2: The Encounter</h3>
+                <p>The encounter with the mysterious stranger set the course of events into motion. With a cryptic message and a warning of an impending storm, the stranger disappeared into the shadows, leaving our hero to face the unknown.
+</p>
+            </div>
+        
+            <div id="chapter-3" class="chapter" style="display: none;">
+                <h3>Chapter 3: The Climb</h3>
+                <p>The climb up the mountain was treacherous. Each step felt like it could be the last. But with determination, our hero pressed on, knowing that the answers to the mystery lay at the summit.
+</p>
+            </div>
+        
+            <div id="chapter-4" class="chapter" style="display: none;">
+                <h3>Chapter 4: The Discovery</h3>
+                <p>At the peak, a discovery awaited that would change everything. Hidden in the ancient ruins, the key to unlocking the secrets of the past was finally within reach.
+</p>
+            </div>
+        
+    </div></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const chapterLinks = document.querySelectorAll('.chapter-link');
+            const allChapters = document.querySelectorAll('.chapter-content > .chapter');
+            
+            chapterLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const targetChapter = document.querySelector(`#${link.getAttribute('data-chapter-id')}`);
+                    
+                    allChapters.forEach(chapter => {
+                        chapter.style.display = 'none'; // Hide all chapters
+                    });
+                    
+                    targetChapter.style.display = 'block'; // Show clicked chapter
+                });
+            });
+
+            // Optional: Show the first chapter by default
+            if (allChapters.length > 0) {
+                allChapters[0].style.display = 'block';
+            }
+        });
+    </script>
+
     
 </div>
  
