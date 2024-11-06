@@ -9,70 +9,65 @@
     <link rel="stylesheet" href="/styles.css">  
 </head>
 <body>
-
 <header>
     <h1 class="logo">My Blog</h1>
     <p class="slogan">Those who envision the beauty of tomorrow's dreams have already begun their journey to success.</p>
     <nav>
         <ul>
             <li><a href="/">Home</a></li>
+
+            <!-- Example for Poetry Category -->
             <li>
-                <a href="/about.html">Art</a>
+                <a>Poetry</a>
                 <div class="dropdown">
-                    <a href="/art1.html">Art Piece 1</a>
-                    <a href="/art2.html">Art Piece 2</a>
+                    
+                        <a href="/posts/my-second-post/">My First Blog Post</a>
+                    
+                        <a href="/posts/2024-11-05-gggggg/">gggggg</a>
+                    
                 </div>
             </li>
-           <li>
-            <a href="/contact.html">Books</a>
-            <div class="dropdown">
-                <div class="book">
-                    <a href="/book1.html">Book 1</a>
-                    <div class="dropdown-chapters">
-                        <a href="/book1/chapter1.html">Chapter 1</a>
-                        <a href="/book1/chapter2.html">Chapter 2</a>
-                        <a href="/book1/chapter3.html">Chapter 3</a>
-                    </div>
-                </div>
-                <div class="book">
-                    <a href="/book2.html">Book 2</a>
-                    <div class="dropdown-chapters">
-                        <a href="/book2/chapter1.html">Chapter 1</a>
-                        <a href="/book2/chapter2.html">Chapter 2</a>
-                        <a href="/book2/chapter3.html">Chapter 3</a>
-                    </div>
-                </div>
-            </div>
-        </li>
+
+            <!-- Example for Music Category -->
             <li>
-                <a href="/contact.html">Poetry</a>
+                <a >Music</a>
                 <div class="dropdown">
-                    <a href="/poem1.html">Poem 1</a>
-                    <a href="/poem2.html">Poem 2</a>
+                    
+                        <a href="/posts/my-third-post/">My First Blog Post</a>
+                    
                 </div>
             </li>
+
+            <!-- Example for Books Category -->
             <li>
-                <a href="/contact.html">Music</a>
+                <a>Books</a>
                 <div class="dropdown">
-                    <a href="/music1.html">Song 1</a>
-                    <a href="/music2.html">Song 2</a>
+                    
+                        <a href="/posts/book-test-post/">The Great Adventure</a>
+                    
                 </div>
             </li>
+
+            <!-- Example for Nature Category -->
             <li>
-                <a href="/contact.html">Nature</a>
+                <a>Nature</a>
                 <div class="dropdown">
-                    <a href="/nature1.html">Nature Piece 1</a>
-                    <a href="/nature2.html">Nature Piece 2</a>
+                    
+                        <a href="/posts/my-first-post/">My First Blog Post</a>
+                    
                 </div>
             </li>
+
         </ul>
     </nav>
 </header>
 
+
+
 <main class="main">
-    <p class="recent">Recent Posts</P>
+   
     <article class="articles">
-        
+      
         
 <div class="blog-post">
     <h2 class="blog-post-title">gggggg</h2>
@@ -91,6 +86,7 @@
  
     </article>
 </main>
+ <a href="#top" class="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></a>
 
 <footer class="footer">
     <div class="footer-content">
@@ -103,9 +99,9 @@
             <h3>Quick Links</h3>
             <ul class="social-links">
                 <li><a href="/">Home</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="#">About</a></li>
+              <li><a href="mailto:yourname@example.com">Contact</a></li>
+             <li><a href="/blog.html">Blog</a></li>
             </ul>
         </div>
 
@@ -137,6 +133,25 @@
             }
         });
     }
+
+    // Show or hide the "Back to Top" button based on scroll position
+    window.onscroll = function() {
+        const backToTop = document.querySelector('.back-to-top');
+        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+            backToTop.style.display = "block";
+        } else {
+            backToTop.style.display = "none";
+        }
+    };
+
+    // Smooth scrolling back to the top
+    document.querySelector('.back-to-top').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 </script>
 
 </body>
