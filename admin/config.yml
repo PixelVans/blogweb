@@ -8,17 +8,31 @@ public_folder: "/images/uploads" # Path for accessing uploaded images
 
 # Collections define the types of content that can be created
 collections:
-  - name: "posts" 
-    label: "posts" 
-    folder: "posts" 
-    create: true 
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" 
-    fields: # Fields to be included in the CMS editor
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
       - { label: "Layout", name: "layout", widget: hidden, default: "layouts/post.njk" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime",default: "" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Category", name: "category", widget: "select", options: ["Book", "Art", "Poetry", "Music", "Nature"] }
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Image", name: "image", widget: "image" } # Single image field for the post
+      - label: "Chapters"
+        name: "chapters"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Chapter Title", name: "chapter_title", widget: "string" }
+          - { label: "Chapter Content", name: "chapter_content", widget: "markdown" }
+        required: false
+        hint: "Appears only for 'Book' category posts."
+        # Visibility setting for "Book" category
+        conditional:
+          field: "category"
+          equals: "Book"
+
 
 
