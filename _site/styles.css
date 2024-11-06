@@ -23,11 +23,11 @@ body {
 }
 .slogan {
     font-size: 16px; 
-    font-weight: 300; /* Use 300 for a light font weight if supported by your font */
+    font-weight: 300; 
     color: black; 
     text-align: center; 
     margin: 10px 0; 
-    font-style: italic; /* Set to italic */
+    font-style: italic; 
     font-weight: 400;
     
    
@@ -67,19 +67,11 @@ nav a {
 }
 
 
-@keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-2px); }
-    50% { transform: translateX(2px); }
-    75% { transform: translateX(-2px); }
-    100% { transform: translateX(0); }
-}
-
 nav a:hover {
     background-color: #393822; 
     color: #fff; 
     border-radius: 5px; 
-    animation: shake 0.3s;
+    
 }
 nav .book {
     position: relative; /* Set relative positioning for the parent */
@@ -164,7 +156,7 @@ nav li:hover .dropdown {
 .dropdown a:hover {
     background-color: rgba(0, 0, 0, 0.71); 
     color: #fff; 
-    animation: shake 0.3s; 
+    
 }
 /* header */
 
@@ -269,29 +261,20 @@ li.post-card{
 .post-description {
     font-size: 13px;
     color: #333;
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hides overflowing text */
-    text-overflow: ellipsis; /* Adds "..." at the end if the text overflows */
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
     font-style: italic;
-    display: block; /* Ensures block-level behavior */
-    width: 280px; /* Ensure full width of the container */
-    max-width: 100%; /* No excess width beyond the parent container */
-    padding-right: 10px; /* Adds space on the right */
-    box-sizing: border-box; /* Ensures padding doesn't affect the width calculation */
+    display: block; 
+    width: 280px; 
+    max-width: 100%; 
+    padding-right: 10px; 
+    box-sizing: border-box; 
 }
-
-
 
 
   
 /* all posts style */
-
-
-
-
-
-
-
 
 
 
@@ -460,12 +443,15 @@ li.post-card{
 }
 
 .social-links a {
-   
+    list-style: none;
     color: black; 
     font-size: 17px;
     transition: color 0.3s, transform 0.3s;
 }
 
+ul.social-links{
+    list-style: none; 
+}
 .social-links a:hover {
     color: #393822;
     transform: scale(1.1); 
