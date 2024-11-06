@@ -236,7 +236,7 @@ nav li:hover .dropdown {
 
 .post-content {
     padding: 6px;
-    margin-left: -80px;
+    
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -244,9 +244,15 @@ nav li:hover .dropdown {
 }
 
 .post-title {
-    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-size: 15px;
     color: #0070f3;
+    font-style: italic;
   
+}
+
+li.post-card{
+   align-items: start;
 }
 
 .post-title a {
@@ -255,19 +261,29 @@ nav li:hover .dropdown {
 }
 
 .post-date {
-    font-size: 0.9rem;
-    color: #666;
+    font-size: 12px;
+    color: #5a5757;
    
 }
 
 .post-description {
-    font-size: 0.95rem;
+    font-size: 13px;
     color: #333;
-    max-height: 3em; /* Restrict to a max of 3 lines */
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hides overflowing text */
+    text-overflow: ellipsis; /* Adds "..." at the end if the text overflows */
+    font-style: italic;
+    display: block; /* Ensures block-level behavior */
+    width: 280px; /* Ensure full width of the container */
+    max-width: 100%; /* No excess width beyond the parent container */
+    padding-right: 10px; /* Adds space on the right */
+    box-sizing: border-box; /* Ensures padding doesn't affect the width calculation */
 }
 
+
+
+
+  
 /* all posts style */
 
 
@@ -326,6 +342,11 @@ nav li:hover .dropdown {
     text-align: center;
     margin: auto;
    
+}
+
+.blog-post-desription{
+    font-style: italic;
+    font-weight: 300;
 }
 .blog-post-image {
     width: 100%;
@@ -466,7 +487,7 @@ nav li:hover .dropdown {
 
 /* Chapter list styles */
 .chapters ul {
-    list-style-type: none;  /* Remove default list styling */
+    list-style-type: none;  
     padding: 0;
     width: 300px;
     margin-left: 20px;

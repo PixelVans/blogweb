@@ -4,11 +4,13 @@ layout: layouts/base.njk
 
 <div class="blog-post">
     <h2 class="blog-post-title">{{ title }}</h2>
-    <p class="blog-post-date">{{ date }}</p>
+    <p class="blog-post-date">Published: {{ date }}</p>
     <div class="blog-image-container">
         <img src="{{ image | url }}" alt="{{ title }}" class="blog-post-image">
+        <p class="blog-post-desription"> {{description}}</p>
     </div>
-
+    
+    
     <div class="blog-post-content">
         {{ content | safe }}
     </div>

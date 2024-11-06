@@ -10,8 +10,9 @@
           <strong class="post-title">
             <a href="{{ post.url | url }}">{{ post.data.title }}</a>
           </strong>
-          <time class="post-date" dateTime="{{ post.date }}">{{ post.date | dayOnly }}</time>
-         <p class="post-description">{{ post.description }}</p>
+          
+           <p class="post-description">{{ post.data.description }}</p>
+            <time class="post-date" dateTime="{{ post.date }}">{{ post.date | dayOnly }}</time>
         </div>
       </li>
     {% endfor %}
