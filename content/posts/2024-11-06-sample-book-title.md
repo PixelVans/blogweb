@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-title: Sample Book Title
+title: Sample Book Title from admin
 date: 2024-11-06T06:09:09.457Z
 category: Book
 description: This is a sample book description for testing using.
